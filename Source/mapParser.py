@@ -47,18 +47,27 @@ def GetMemoryType(myLine):
 def GetFolderName(myLine):
   levels = myLine.count('/')
   folderName = " "
+  array = [ ] 
   if (levels >= 2):
     lastDivider = myLine.rfind("/")
+    initialDivider = myLine.find("/")
+    initial = myLine.rfind(" ")
+
+    for x in range(0, levels):
+      array.append(myLine[initial + 1 :initialDivider])
+      initial = initialDivider
+      initialDivider = myLine.find("/",initial +1)
+
     otherDivider = myLine.rfind("/",0, lastDivider)
     folderName = myLine[otherDivider + 1 :lastDivider]
-  return folderName
+  return folderName , array
 
 def GetObjectName(myLine):
   dividerLocation = myLine.rfind("/")
   par = myLine.rfind("(")
   fill = myLine.count('*fill*')
   levels = myLine.count('/')
-  folderName = GetFolderName(myLine)
+  folderName ,path = GetFolderName(myLine)
   if (fill > 0):
     objectName = "Padding"
   elif (dividerLocation < par):
@@ -66,24 +75,30 @@ def GetObjectName(myLine):
   else:
     objectName = myLine[dividerLocation + 1 :myLine.rfind(".")]
 
-  return objectName, folderName
+  return objectName, folderName, path
 
 def append_list_as_row(fileName, listOfElem):
     with open(fileName, 'a+', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(listOfElem)
 
+def IsValidObjectName(myObjectName):
+  countOfHexValues = myObjectName.count('0x')
+  if(countOfHexValues > 1):
+    return False
+  return True
+
 def main():
   
   initialTime = datetime.now()
-  smallSampleFile = open("MapParser/MapFiles/smallSampleFile.map", "r")
-  count = len(open("MapParser/MapFiles/smallSampleFile.map").readlines(  ))
+  smallSampleFile = open("MapParser/MapFiles/SampleFile.map", "r")
+  count = len(open("MapParser/MapFiles/SampleFile.map").readlines(  ))
 
   if os.path.exists("output.csv"):
     os.remove("output.csv")
 
 
-  rowContent = ["Line", "Memory Type", "Address", "Size" , "Name", "Folder Name"]
+  rowContent = ["Line", "Memory Type", "Address", "Size" , "Name", "Folder Name", "Path1", "Path 2", "Path 3"]
   append_list_as_row('output.csv', rowContent)
 
 
@@ -98,11 +113,18 @@ def main():
       else:
         address , sizeHex =  GetAddressAndLength(line)
         if (sectionBreakerFound and IsValidAddress(address, sizeHex)):
-          objectName , folderName= GetObjectName(line)
+          objectName , folderName, path = GetObjectName(line)
+
+          
+
           size = int(sizeHex,0)
-          # print("Line: "+ str(x) + " Memory Type " + memoryType + " Address "+ address + " Lenght: " + str(size) + " Object " + objectName )
-          rowContent = [x, memoryType, address, size , objectName, folderName]
-          append_list_as_row('output.csv', rowContent)
+          if (IsValidObjectName(objectName)):
+            # print("Line: "+ str(x) + " Memory Type " + memoryType + " Address "+ address + " Lenght: " + str(size) + " Object " + objectName )
+            rowContent = [x, memoryType, address, size , objectName, folderName]
+            pathLen = len(path)
+            for x in range(0, pathLen): 
+              rowContent.append(path[pathLen -1 - x])
+            append_list_as_row('output.csv', rowContent)
 
   print ("Total Processing time is : " + str(datetime.now() - initialTime)) 
   print ("Total analized lines are  : " + str(count)) 
