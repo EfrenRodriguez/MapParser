@@ -1,0 +1,32 @@
+{
+  "configuration": [
+    {
+      "name": "text",
+      "alias": "Rom"
+    },
+    {
+      "name": "DtcTable",
+      "alias": "Dtc Table"
+    },
+    {
+      "name": "dtcVectorTable",
+      "alias": "Dtc Vector Table"
+    },
+    {
+      "name": "fvectors",
+      "alias": "Fixed Vector"
+    },
+    {
+      "name": "parametricData",
+      "alias": "Parametric Data"
+    },
+    {
+      "name": "rodata",
+      "alias": "Program Data"
+    },
+    {
+      "name": "data",
+      "alias": "Ram"
+    }
+  ]
+}

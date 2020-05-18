@@ -2,6 +2,7 @@ from datetime import datetime
 from datetime import timedelta
 import csv
 import os
+import json
 
 def IsOnlySpaces(myLine, initial, final):
   sectionToAnalize = myLine[initial:final]
@@ -40,8 +41,17 @@ def IsValidAddress(myAddress, mySize):
 
   return valueToReturn
 
-def GetMemoryType(myLine):
+def GetMemoryName(rawMemoryType, myJsonConfigurationData):
+  memoryName = rawMemoryType
+  for i in myJsonConfigurationData["configuration"]:
+    if i["name"] == rawMemoryType:
+      memoryName = i["alias"]
+      break
+  return memoryName
+
+def GetMemoryType(myLine, myJsonConfigurationData):
   memoryType = myLine[myLine.find(".") + 1 :myLine.find(" ")]
+  memoryType = GetMemoryName(memoryType, myJsonConfigurationData)
   return memoryType
 
 def GetFolderName(myLine):
@@ -94,6 +104,9 @@ def main():
   smallSampleFile = open("MapParser/MapFiles/SampleFile.map", "r")
   count = len(open("MapParser/MapFiles/SampleFile.map").readlines(  ))
 
+  with open('MapParser/configuration.json') as json_file:
+    theJsonConfigurationData = json.load(json_file)
+
   if os.path.exists("output.csv"):
     os.remove("output.csv")
 
@@ -108,7 +121,7 @@ def main():
       line = smallSampleFile.readline()
       if (IsSectionBreaker(line)):
         sectionBreakerFound = True
-        memoryType = GetMemoryType(line)
+        memoryType = GetMemoryType(line, theJsonConfigurationData)
         sectionAddressStart , sectionTotalSize = GetAddressAndLength(line)
       else:
         address , sizeHex =  GetAddressAndLength(line)
