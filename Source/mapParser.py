@@ -43,7 +43,7 @@ def IsValidAddress(myAddress, mySize):
 
 def GetMemoryName(rawMemoryType, myJsonConfigurationData):
   memoryName = rawMemoryType
-  for i in myJsonConfigurationData["configuration"]:
+  for i in myJsonConfigurationData["aliasConfiguration"]:
     if i["name"] == rawMemoryType:
       memoryName = i["alias"]
       break
