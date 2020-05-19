@@ -3,6 +3,7 @@ from datetime import timedelta
 import csv
 import os
 import json
+from collections import defaultdict
 
 def IsOnlySpaces(myLine, initial, final):
   sectionToAnalize = myLine[initial:final]
@@ -48,6 +49,12 @@ def GetMemoryName(rawMemoryType, myJsonConfigurationData):
       memoryName = i["alias"]
       break
   return memoryName
+
+def WantToDisplayMemoryTypeName(memoryType, myJsonConfigurationData):
+  for i in myJsonConfigurationData["ignoreConfiguration"]:
+    if i["ignore"] == memoryType:
+      return False
+  return True
 
 def GetMemoryType(myLine, myJsonConfigurationData):
   memoryType = myLine[myLine.find(".") + 1 :myLine.find(" ")]
@@ -114,6 +121,8 @@ def main():
   rowContent = ["Line", "Memory Type", "Address", "Size" , "Name", "Folder Name", "Path1", "Path 2", "Path 3"]
   append_list_as_row('output.csv', rowContent)
 
+  directory = defaultdict(lambda: defaultdict(int))
+
 
   if smallSampleFile.mode == 'r':
     sectionBreakerFound = False
@@ -131,13 +140,47 @@ def main():
           
 
           size = int(sizeHex,0)
-          if (IsValidObjectName(objectName)):
+          if (IsValidObjectName(objectName)and WantToDisplayMemoryTypeName(memoryType, theJsonConfigurationData)):
             # print("Line: "+ str(x) + " Memory Type " + memoryType + " Address "+ address + " Lenght: " + str(size) + " Object " + objectName )
             rowContent = [x, memoryType, address, size , objectName, folderName]
             pathLen = len(path)
             for x in range(0, pathLen): 
               rowContent.append(path[pathLen -1 - x])
             append_list_as_row('output.csv', rowContent)
+
+            memoryString = str(memoryType)
+            objectString = str(objectName)
+            directory[memoryString][objectString] += size
+
+            # if memoryString in directory:
+            #   currentSize =  directory[memoryString][objectString]
+            #   directory[str(memoryType)][str(objectName)] = currentSize + size
+            # else:
+            #   directory[memoryString][objectString] = size
+
+
+  topLevelKeys = list(directory.keys())
+  print (directory.keys())
+  print (topLevelKeys.__len__())
+  print (topLevelKeys[0])
+  lowLevelKeys = list(directory[topLevelKeys[0]].keys())
+  print (directory[topLevelKeys[0]][lowLevelKeys[0]])
+
+  if os.path.exists("summary.csv"):
+    os.remove("summary.csv")
+
+  rowContent = ["Memory Type", "Name", "Size"]
+  append_list_as_row('summary.csv', rowContent)
+
+  for i in range(topLevelKeys.__len__()):
+    lowLevelKeys = list(directory[topLevelKeys[i]].keys())
+    for j in range (lowLevelKeys.__len__()):
+      rowContent = [topLevelKeys[i], lowLevelKeys[j], directory[topLevelKeys[i]] [lowLevelKeys[j]] ]
+      append_list_as_row('summary.csv', rowContent)
+
+    
+
+
 
   print ("Total Processing time is : " + str(datetime.now() - initialTime)) 
   print ("Total analized lines are  : " + str(count)) 

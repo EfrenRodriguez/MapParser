@@ -1,4 +1,30 @@
 {
+  "ignoreConfiguration": [
+    {
+      "ignore": "debug_abbrev"
+    },
+    {
+      "ignore": "debug_aranges"
+    },
+    {
+      "ignore": "debug_frame"
+    },
+    {
+      "ignore": "debug_info"
+    },
+    {
+      "ignore": "debug_line"
+    },
+    {
+      "ignore": "debug_loc"
+    },
+    {
+      "ignore": "debug_str"
+    },
+    {
+      "ignore": "debug_ranges"
+    }
+  ],
   "aliasConfiguration": [
     {
       "name": "text",
