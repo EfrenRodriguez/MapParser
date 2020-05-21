@@ -130,11 +130,14 @@ def ExportSummaryToJson(myDictionary):
 def main():
   
   initialTime = datetime.now()
-  mapFileToParse = open("MapFiles/sampleFile.map", "r")
-  count = len(open("MapFiles/sampleFile.map").readlines(  ))
 
   with open('Configuration/configuration.json') as json_file:
     theJsonConfigurationData = json.load(json_file)
+
+  inputFile = theJsonConfigurationData["inputFile"]
+  
+  mapFileToParse = open(inputFile, "r")
+  count = len(open(inputFile).readlines(  ))
 
   if os.path.exists("Outputs/output.csv"):
     os.remove("Outputs/output.csv")
