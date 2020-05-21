@@ -83,7 +83,6 @@ def GetObjectName(myLine):
   dividerLocation = myLine.rfind("/")
   par = myLine.rfind("(")
   fill = myLine.count('*fill*')
-  levels = myLine.count('/')
   folderName ,path = GetFolderName(myLine)
   if (fill > 0):
     objectName = "Padding"
@@ -105,82 +104,70 @@ def IsValidObjectName(myObjectName):
     return False
   return True
 
+def ExportSummaryToCsv(myDictionary):
+  topLevelKeys = list(myDictionary.keys())
+  lowLevelKeys = list(myDictionary[topLevelKeys[0]].keys())
+  
+  if os.path.exists("Outputs/summary.csv"):
+    os.remove("Outputs/summary.csv")
+
+  rowContent = ["Memory Type", "Name", "Size"]
+  append_list_as_row('Outputs/summary.csv', rowContent)
+
+  for i in range(topLevelKeys.__len__()):
+    lowLevelKeys = list(myDictionary[topLevelKeys[i]].keys())
+    for j in range (lowLevelKeys.__len__()):
+      rowContent = [topLevelKeys[i], lowLevelKeys[j], myDictionary[topLevelKeys[i]] [lowLevelKeys[j]] ]
+      append_list_as_row('Outputs/summary.csv', rowContent)
+
+def ExportSummaryToJson(myDictionary):
+  jsonOutput = json.dumps(myDictionary, indent=4)
+
+  with open ("Outputs/summary.json", "w") as outfile:
+    outfile.write(jsonOutput)
+
+
 def main():
   
   initialTime = datetime.now()
-  smallSampleFile = open("MapParser/MapFiles/SampleFile.map", "r")
-  count = len(open("MapParser/MapFiles/SampleFile.map").readlines(  ))
+  mapFileToParse = open("MapFiles/sampleFile.map", "r")
+  count = len(open("MapFiles/sampleFile.map").readlines(  ))
 
-  with open('MapParser/configuration.json') as json_file:
+  with open('Configuration/configuration.json') as json_file:
     theJsonConfigurationData = json.load(json_file)
 
-  if os.path.exists("output.csv"):
-    os.remove("output.csv")
+  if os.path.exists("Outputs/output.csv"):
+    os.remove("Outputs/output.csv")
 
 
   rowContent = ["Line", "Memory Type", "Address", "Size" , "Name", "Folder Name", "Path1", "Path 2", "Path 3"]
-  append_list_as_row('output.csv', rowContent)
+  append_list_as_row('Outputs/output.csv', rowContent)
 
   directory = defaultdict(lambda: defaultdict(int))
 
 
-  if smallSampleFile.mode == 'r':
+  if mapFileToParse.mode == 'r':
     sectionBreakerFound = False
     for x in range(0,count) :
-      line = smallSampleFile.readline()
+      line = mapFileToParse.readline()
       if (IsSectionBreaker(line)):
         sectionBreakerFound = True
         memoryType = GetMemoryType(line, theJsonConfigurationData)
-        sectionAddressStart , sectionTotalSize = GetAddressAndLength(line)
       else:
         address , sizeHex =  GetAddressAndLength(line)
         if (sectionBreakerFound and IsValidAddress(address, sizeHex)):
           objectName , folderName, path = GetObjectName(line)
-
-          
-
           size = int(sizeHex,0)
-          if (IsValidObjectName(objectName)and WantToDisplayMemoryTypeName(memoryType, theJsonConfigurationData)):
-            # print("Line: "+ str(x) + " Memory Type " + memoryType + " Address "+ address + " Lenght: " + str(size) + " Object " + objectName )
+          if (IsValidObjectName(objectName) and WantToDisplayMemoryTypeName(memoryType, theJsonConfigurationData)):
             rowContent = [x, memoryType, address, size , objectName, folderName]
             pathLen = len(path)
             for x in range(0, pathLen): 
               rowContent.append(path[pathLen -1 - x])
-            append_list_as_row('output.csv', rowContent)
+            append_list_as_row('Outputs/output.csv', rowContent)
+            directory[str(memoryType)][str(objectName)] += size
 
-            memoryString = str(memoryType)
-            objectString = str(objectName)
-            directory[memoryString][objectString] += size
-
-            # if memoryString in directory:
-            #   currentSize =  directory[memoryString][objectString]
-            #   directory[str(memoryType)][str(objectName)] = currentSize + size
-            # else:
-            #   directory[memoryString][objectString] = size
-
-
-  topLevelKeys = list(directory.keys())
-  print (directory.keys())
-  print (topLevelKeys.__len__())
-  print (topLevelKeys[0])
-  lowLevelKeys = list(directory[topLevelKeys[0]].keys())
-  print (directory[topLevelKeys[0]][lowLevelKeys[0]])
-
-  if os.path.exists("summary.csv"):
-    os.remove("summary.csv")
-
-  rowContent = ["Memory Type", "Name", "Size"]
-  append_list_as_row('summary.csv', rowContent)
-
-  for i in range(topLevelKeys.__len__()):
-    lowLevelKeys = list(directory[topLevelKeys[i]].keys())
-    for j in range (lowLevelKeys.__len__()):
-      rowContent = [topLevelKeys[i], lowLevelKeys[j], directory[topLevelKeys[i]] [lowLevelKeys[j]] ]
-      append_list_as_row('summary.csv', rowContent)
-
-    
-
-
+  ExportSummaryToCsv(directory)
+  ExportSummaryToJson(directory)
 
   print ("Total Processing time is : " + str(datetime.now() - initialTime)) 
   print ("Total analized lines are  : " + str(count)) 

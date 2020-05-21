@@ -1,0 +1,958 @@
+Memory Type,Name,Size
+Rom,Header,94
+Rom,start,107
+Rom,lib_a-strlen,16
+Rom,ApplianceApiPlugin,66
+Rom,LaundryUassert,195
+Rom,TunePlayer_HighVolumeTuneChanger,88
+Rom,TunePlayer_VolumeSourceMappedSequencedTuneWithVolume,167
+Rom,BlackoutRecoveryManager,717
+Rom,BoardInfoPlugin,344
+Rom,OkToJumpToBootloaderUpdater,224
+Rom,BuzzerTester,79
+Rom,CycleController,344
+Rom,CycleEngineApplication,87
+Rom,CycleEngineManager,637
+Rom,CycleEngine_CycleSelector,346
+Rom,CycleStepBuilder_DryerCoolDown,49
+Rom,CycleStepBuilder_ExtendedTumble,49
+Rom,CycleStepBuilder_MotorControlReversingDrum,49
+Rom,CycleStepBuilder_ReduceStatic,49
+Rom,CycleStepBuilder_SensorDryController,49
+Rom,CycleStepBuilder_Steam,49
+Rom,CycleStepBuilder_TimedDryController,49
+Rom,CycleStepFactory_CycleStepStack,187
+Rom,CycleStepPreprocessorActions,347
+Rom,CycleStep_DryerCoolDown,409
+Rom,CycleStep_ElapsedTime,427
+Rom,CycleStep_ExtendedTumble,544
+Rom,CycleStep_MotorControlReversingDrum,747
+Rom,CycleStep_SensorDryController,436
+Rom,CycleStep_Steam,1202
+Rom,CycleStep_TimedDryController,316
+Rom,AverageBaseSensingCycleTimeErdUtils,102
+Rom,Curvature,752
+Rom,EcoDryController,1737
+Rom,EndOfCycleReasonProcessor,188
+Rom,HeatControl,1130
+Rom,HeatControlParametricDataLoader,905
+Rom,HighRestrictionDetection,1302
+Rom,InitialCycleTimeAverageBaseSensingTimeUpdater,318
+Rom,InitialCycleTimeCalculator,641
+Rom,InitialCycleTimeDetangleFactorIndex,8
+Rom,InitialCycleTimeDrynessMultiplicationIndex,82
+Rom,InitialCycleTimePlugin,21
+Rom,OptionRequestHandler,242
+Rom,OverTemperatureMonitor,426
+Rom,RelayControlResolver,905
+Rom,RemainingCycleTimeUpdater,536
+Rom,RemoteStopCycleCommandHandler,178
+Rom,AlgorithmUtils,76
+Rom,ClothDampnessCheck,1915
+Rom,DrumGroundWatchdog,710
+Rom,DryLoadDetection,1426
+Rom,EcoDrySensorDryProfileSelector,953
+Rom,EmptyDrumDetection,1089
+Rom,LoadSizeDetectionByAggregation,487
+Rom,LoadSizeDetectionByContact,530
+Rom,LoadSizeDetectionByTemperature,697
+Rom,RestrictionDetection,954
+Rom,SensorDryAlgorithms,97
+Rom,SensorDryDryingParametricDataUtils,351
+Rom,TemperatureMultiplierIndex,81
+Rom,Trimmer,748
+Rom,TrimmerPlugin,36
+Rom,ApplicationDataModelPlugin,269
+Rom,DataModel_DataSourceApplication,161
+Rom,DataSourceRamPlugin,43
+Rom,DataSource_Application,689
+Rom,ErdDefaultWriter,160
+Rom,ErdOnChangeTranslatorStack,59
+Rom,InputGroup_NvStorageDefaultData,212
+Rom,NvDataSourcePlugin,134
+Rom,NvStorageStack,125
+Rom,OnChangeErdTransfer,318
+Rom,AdcGroup_Shift,143
+Rom,CycleHistoryRecordConstructor,3449
+Rom,FaultSnapshotMiscellaneousUpdater,559
+Rom,MoistureComputedVoltage,72
+Rom,RelayTimeAccumulator,315
+Rom,ServiceDiagnosticsPlugin,330
+Rom,UsageProfile,1978
+Rom,DoorPlugin,351
+Rom,Input_GpioPulseQueue60Hz,119
+Rom,PulseQueueEvaluation,284
+Rom,PulseQueueResultDebounce,175
+Rom,DryerSheetInventory,562
+Rom,EepromTestForFCT,119
+Rom,BlockedVentFaultMonitor,297
+Rom,BlockedVentFaultNotification,188
+Rom,DoorStuckFaultMonitor,445
+Rom,ErdFaultUpdater,240
+Rom,ErdResourceWatchdogFaultHandler,261
+Rom,EventSequenceCommunicationFault,133
+Rom,FaultOccurrenceMonitor,196
+Rom,FaultPlugin,87
+Rom,MisWireFaultMonitor,398
+Rom,Gea2CommonCommandsConfigurator,111
+Rom,KeyStatusLogger,129
+Rom,KnobPositionHistoryRecorder,107
+Rom,Input_VirtualKnob,291
+Rom,Selectable_FaultCodeEraser,89
+Rom,LaundryTuneDefinitions,7
+Rom,MachineSubCycleMonitor,275
+Rom,Action_CycleCountAccumulator,49
+Rom,Adc_BandLimitCheckWrapper,265
+Rom,DiagnosticsPlugin,12
+Rom,RelayCountSaver,216
+Rom,DrumRelayDeviceStateMachine,719
+Rom,DryerTemperatureCollector,715
+Rom,Filter_ScaledWeightedAverage,542
+Rom,GpioGroup_OutputManager,452
+Rom,Input_OkToStartApplication,189
+Rom,LoadEnabler,151
+Rom,McApplication,166
+Rom,MoistureSensorFilter,723
+Rom,ThermistorAdcOutOfRangeFaultMonitor,259
+Rom,ParametricVersionMatchesPlugin,304
+Rom,PersonalityUtils,153
+Rom,CycleStep_ReduceStatic,1264
+Rom,RemoteControlPlugin,23
+Rom,RemoteExtendedTumbleStarter,360
+Rom,RemoteStartEnabler,309
+Rom,ConsumerErrorModeEntryManager,249
+Rom,ConsumerErrorModeExitManager,134
+Rom,Output_FormattedSevenSegmentDisplay,613
+Rom,Selectable_DoorLatchStatusTest,211
+Rom,Selectable_DoorSwitchStatusTest,192
+Rom,Selectable_FaultCodeDisplay,216
+Rom,Selectable_MoistureSensorTest,232
+Rom,Selectable_PersonalityDisplay,114
+Rom,Selectable_PersonalitySelector,367
+Rom,Selectable_SevenSegmentVersionDisplay,168
+Rom,Selectable_ThermistorTest,641
+Rom,Selectable_UiTest,105
+Rom,Selectable_WaterValveTest,440
+Rom,ServiceModeEntryManager,304
+Rom,ServiceModeExitManager,292
+Rom,ServiceModeTestManager,227
+Rom,SoftKeyEventSource_ServiceModeCheck,392
+Rom,TimerModuleStack,24
+Rom,BlockedVentDetection,297
+Rom,BlockedVentMvp,41
+Rom,BlockedVentPlugin,70
+Rom,BlockedVentPresenter,593
+Rom,BlockedVentView_Concrete,405
+Rom,CleanLintFilterModel_DataModel,35
+Rom,CleanLintFilterMvp,34
+Rom,CleanLintFilterPresenter,229
+Rom,CleanLintFilterView_Dual,28
+Rom,ContinuousCycleMode,174
+Rom,ControlLockMvp,73
+Rom,ControlLockPresenter,1007
+Rom,ControlLockView_Concrete,210
+Rom,CriticalFaultPresenter,791
+Rom,CriticalFaultView_Ssd,294
+Rom,CriticalFaultMvp,53
+Rom,OptionUtils,825
+Rom,OptionUtilsPlugin,47
+Rom,CycleSelectorMvp,87
+Rom,CycleSelectorPresenter,898
+Rom,CycleSelectorView_Arbitrator,153
+Rom,Input_CycleSelectorArbitrator,277
+Rom,KnobChangeTunePlayer,138
+Rom,KnobChangeWakeIdleSignalSender,95
+Rom,CycleStatusIndicator,141
+Rom,DampAlertModel_DataModel,87
+Rom,DampAlertMvp,56
+Rom,DampAlertPresenter,1585
+Rom,DampAlertView_Concrete,130
+Rom,CycleSupportDataSource,42
+Rom,ModelSupportDataSource,42
+Rom,SensorDryDataSource,42
+Rom,SensorDryDataSourceIndexPlugin,115
+Rom,DefaultOptionLoader,2051
+Rom,DelayStartCountDownTimer,236
+Rom,DelayStartMvp,66
+Rom,DelayStartPresenter,3085
+Rom,DelayStartView_Concrete,302
+Rom,DisplayConfigurator,831
+Rom,DisplayController_Concrete,1068
+Rom,IntegerDisplay_MessageDisplayVariable,358
+Rom,Output_DelayTimeIn3Digits,203
+Rom,Output_Mapped,365
+Rom,Output_TimeDisplayHourMin,71
+Rom,Output_TimeDisplayHourMin2Digits,265
+Rom,Output_TimeDisplayHourMin2Digits0H,262
+Rom,Output_TimeDisplayHourMin3Digits,290
+Rom,SsdConfigurator,153
+Rom,DrumLightModel_DataModel,48
+Rom,DrumLightMvp,56
+Rom,DrumLightPresenter,570
+Rom,DrumLightView_Concrete,90
+Rom,EcoDryModel_DataModel,113
+Rom,EcoDryMvp,57
+Rom,EcoDryPresenter,1328
+Rom,EcoDryView_Concrete,215
+Rom,EndOfCycleModel_DataModel,48
+Rom,EndOfCycleMvp,62
+Rom,EndOfCyclePresenter,647
+Rom,EndOfCycleView_Concrete,165
+Rom,ExtendedTumbleModel_DataModel,35
+Rom,ExtendedTumbleMvp,76
+Rom,ExtendedTumblePresenter,833
+Rom,ExtendedTumbleView_Concrete,192
+Rom,Input_InitialKnobPosition,116
+Rom,LegacyExtendedTumbleHandler,175
+Rom,MyCycleModel_Concrete,248
+Rom,MyCycleMvp,70
+Rom,MyCyclePresenter,1704
+Rom,MyCycleSaveClearManager,507
+Rom,MyCycleView_Concrete,176
+Rom,OptionBoolAirFluffMvp,43
+Rom,OptionBoolPresenter,778
+Rom,OptionBoolView_AirFluff,191
+Rom,OptionBoolView_WarmUp,89
+Rom,OptionBoolWarmUpMvp,43
+Rom,OptionLevelModel_DrynessLevel,48
+Rom,OptionLevelMvp,121
+Rom,OptionLevelPresenter,801
+Rom,OptionLevelView_Concrete,147
+Rom,OptionLevelModel_TemperatureSelector,48
+Rom,Output_DrumLightControl,75
+Rom,PersonalityChangeHandler,174
+Rom,PersonalitySelectionMvp,64
+Rom,PersonalitySelectionPresenter,381
+Rom,PersonalitySelectionView_Concrete,135
+Rom,PowerModel_DataModel,48
+Rom,PowerMvp,39
+Rom,PowerPresenter,393
+Rom,PowerView_Concrete,76
+Rom,ReduceStaticMvp,39
+Rom,ReduceStaticPresenter,617
+Rom,ReduceStaticView_Concrete,103
+Rom,RemainingCycleTimeModel_DataModel,61
+Rom,RemainingCycleTimeMvp,49
+Rom,RemainingCycleTimePresenter,572
+Rom,RemainingCycleTimeView_Concrete,75
+Rom,SenseModeMvp,45
+Rom,SenseModePresenter,546
+Rom,SenseModeView_Concrete,83
+Rom,StartPauseModel_Concrete,126
+Rom,StartPauseMvp,68
+Rom,StartPausePresenter,2194
+Rom,StartPauseView_Concrete,196
+Rom,SteamCycleOptionMvp,37
+Rom,SteamCycleOptionPresenter,573
+Rom,SteamCycleOptionView_Concrete,109
+Rom,SubCycleView_AirFluff,25
+Rom,SubCycleView_CoolDownConcrete,25
+Rom,SubCycleView_DryingConcrete,28
+Rom,SubCycleView_ExtendedTumbleConcrete,28
+Rom,SubCycleCoolDownMvp,121
+Rom,SubCycleDryingMvp,46
+Rom,SubCycleExtendedTumbleMvp,46
+Rom,SubCycleModel_AirFluffDataModel,35
+Rom,SubCycleModel_CoolDownDataModel,35
+Rom,SubCycleModel_DryingDataModel,35
+Rom,SubCycleModel_ExtendedTumbleDataModel,35
+Rom,SubCyclePresenter,413
+Rom,TimeAdjustModel_DataModel,178
+Rom,TimeAdjustMvp,48
+Rom,TimeAdjustPresenter,2919
+Rom,TimeAdjustView_TimedDry,189
+Rom,TimerDiagnosticsPlugin,58
+Rom,UiApplication,2072
+Rom,UiStateMachine,778
+Rom,UiStateMachineConfig_Concrete,158
+Rom,UnpopulatedCycleMvp,31
+Rom,UnpopulatedCyclePresenter,277
+Rom,UnpopulatedCycleView_Concrete,70
+Rom,DelayedValidKeySignalSender,97
+Rom,NoUserActivitySignalPublisher,190
+Rom,UserActivityDetectionPlugin,136
+Rom,VirtualKnobStack,141
+Rom,VolumeView_AlertVolume,85
+Rom,VolumeView_KeyVolume,67
+Rom,VolumeModel_DataModel,22
+Rom,VolumeMvp,361
+Rom,VolumePresenter,597
+Rom,WiFiCommissioningMvp,51
+Rom,WiFiCommissioningPresenter,1190
+Rom,WiFiCommissioningView_Concrete,550
+Rom,WiFiPlugin,120
+Rom,WasherLinkPresenter,1622
+Rom,WasherLinkView_NullScene,284
+Rom,CycleRunWatchdog,133
+Rom,WatchdogStack,11
+Rom,SoftKeyEventSource_WifiKeyBoard,285
+Rom,TlMbConsumerErrorModeApplication,476
+Rom,NvDefaultData,46
+Rom,GeaStack,743
+Rom,Application,188
+Rom,CycleSupportApplication,255
+Rom,DrumLightStack,127
+Rom,DryerHardwareTl27Mb,385
+Rom,DryerTl27MbDevicesStack,344
+Rom,ErdMultiplexerStack,10
+Rom,HeartbeatSimulator,10
+Rom,KeyStack,895
+Rom,LedStack,278
+Rom,MessageDisplayStack,255
+Rom,PowerModeManagerPlugin,23
+Rom,TlMbKnobStack,19
+Rom,TlMbPersonalitySelectionApplication,119
+Rom,TunePlayerStack,234
+Rom,WasherLinkMvp,23
+Rom,HeartbeatPlugin,149
+Rom,TlMbApplicationStartPlugin,313
+Rom,TlMbPersonalityDetectorStack,122
+Rom,Action_LowPower,11
+Rom,Action_NormalPower,11
+Rom,TlMbServiceModeApplication,399
+Rom,TlMbServiceModeTestPlugin,694
+Rom,LocalStackConfiguration,7
+Rom,StackUsageMonitor,79
+Rom,main,1664
+Rom,Input_AdcTemperatureConverterInlet,168
+Rom,Input_AdcTemperatureConverterOutlet,160
+Rom,AdcGroup_Rx231,868
+Rom,BufferedUart_Channel12Dtc,63
+Rom,BufferedUart_Channel1Dtc,616
+Rom,BufferedUart_Channel5Dtc,618
+Rom,BufferedUart_Channel8Dtc,635
+Rom,CMT0,151
+Rom,DTC,26
+Rom,GpioGroup_Rx231,3812
+Rom,I2c_Rx231SerialChannel1,380
+Rom,I2c_Rx231SerialChannel12,1217
+Rom,Pwm_BuzzerFrequencyRx231,319
+Rom,Pwm_BuzzerVolumeRx231,263
+Rom,Pwm_DrumLightRx231,337
+Rom,VectorTable,1046
+Rom,TemperatureSensorPlugin,85
+Rom,SystemReset,10
+Rom,BootLoaderConfiguration,7
+Rom,ImageInfoPlugin,32
+Rom,DryerTl27MbMc.parametric,9
+Rom,Action_Context,46
+Rom,Action_Delayed,46
+Rom,Action_DelayedUntilBool,144
+Rom,Action_ErdSignalPublisher,60
+Rom,Action_ErdTransfer,111
+Rom,Action_ErdWriter,50
+Rom,Action_Null,14
+Rom,Allocator_Resettable_Block,209
+Rom,Allocator_Resettable_UsageMonitor,109
+Rom,Input_StackUsageCalculator,418
+Rom,StackAllocator,418
+Rom,DataSource_ApplianceApiRevision1,1165
+Rom,Adsr_Isr,484
+Rom,ErdValueTunePlayer,79
+Rom,RepeatingTunePlayer,147
+Rom,TunePlayer_Adsr,166
+Rom,TunePlayer_DataSource,115
+Rom,TunePlayer_Mapped,97
+Rom,ImageInfo_Concrete,430
+Rom,BootLoaderParametric,98
+Rom,Gea2CommonCommands,880
+Rom,Input_ErdGea2UnlockState,236
+Rom,Gea2Configurator,62
+Rom,Gea2ConfiguratorBufferedFullDuplexUartInterface,169
+Rom,Gea2ConfiguratorDynamicRoutingTableWithReplacement,50
+Rom,Gea2ConfiguratorStaticRoutingTable,50
+Rom,Gea2MessageEndpoint_Gea2PacketEndpointAdapter,99
+Rom,Gea2BusNode_Gea2InterfaceAdapter,166
+Rom,Gea2BusNode_Gea2PacketEndpoint,141
+Rom,Gea2BusNode_RoutingTable_DynamicWithReplacement,168
+Rom,Gea2BusNode_RoutingTable_Static,58
+Rom,Gea2Bus_Simple,288
+Rom,Gea2InterfaceAcceptDelegate,5
+Rom,Gea2Interface_BufferedFullDuplex,1069
+Rom,Gea2PacketEndpoint_PacketRestrictor,187
+Rom,Gea2PacketQueue_EfficientStorage,260
+Rom,Crc16Calculator_Table,53
+Rom,CycleSelector_Protected,110
+Rom,CycleStepBuilder_DependentParallelWithRemainingTimeExtension,225
+Rom,CycleStepBuilder_JoinedParallelWithRemainingTimeExtension,194
+Rom,CycleStepBuilder_Null,14
+Rom,CycleStepBuilder_RoutingSwitch,248
+Rom,CycleStepBuilder_SelectDeselectErdWriter,53
+Rom,CycleStepBuilder_SequenceWithRemainingTimeExtension,194
+Rom,CycleStepBuilder_StartErdWriter,53
+Rom,CycleStepBuilder_StartStopErdWriter,51
+Rom,CycleStepBuilder_StartStopPauseResumeErdWriter,51
+Rom,CycleStepBuilder_StepStatus,51
+Rom,CycleStepFactory_OptimizedCycleStepBuilderCollection,153
+Rom,CycleStepFactory_StateMachineWrapper,84
+Rom,CycleStep_DelayChildUntil,333
+Rom,CycleStep_DependentParallel,773
+Rom,CycleStep_JoinedParallel,679
+Rom,CycleStep_Null,17
+Rom,CycleStep_PreProcessor,245
+Rom,CycleStep_RoutingSwitch,828
+Rom,CycleStep_SelectDeselectErdWriter,71
+Rom,CycleStep_Sequence,508
+Rom,CycleStep_StartErdWriter,51
+Rom,CycleStep_StartStopErdWriter,55
+Rom,CycleStep_StartStopPauseResumeErdWriter,89
+Rom,CycleStep_StateMachine,515
+Rom,CycleStep_StepStatus,78
+Rom,CycleStepExtension_JoinedParallelRemainingTime,179
+Rom,CycleStepExtension_SequenceRemainingTime,159
+Rom,CycleStepBuilder_AnyParallelWithRemainingTimeExtension,194
+Rom,CycleStepBuilder_TimedWithRemainingTimeExtension,53
+Rom,CycleStepExtension_AnyParallelRemainingTime,172
+Rom,CycleStepExtension_DependentParallelRemainingTime,86
+Rom,CycleStep_TimedWithRemainingTimeExtension,185
+Rom,ConstArrayMap_BinarySearch,133
+Rom,ConstArrayMap_BinarySearchWithComparator,130
+Rom,ConstArrayMap_Composite,210
+Rom,ConstArrayMap_DirectIndex,189
+Rom,ConstArrayMap_LinearSearch,116
+Rom,ConstBidirectionalMap_ConstArrayMap,90
+Rom,ConstMultiMap_BinarySearch,272
+Rom,DataMapper,177
+Rom,DigitalOutputGroup_BitmappedOutputAdapter,164
+Rom,ErdConcatenatorService,426
+Rom,ErdDataExtractor,280
+Rom,ErdHeartbeat,684
+Rom,ErdLogicService,336
+Rom,ErdMultiplexerService,459
+Rom,ErdOnChangeTranslatorService,345
+Rom,InputOutput_DataSource,104
+Rom,Input_DataSource,87
+Rom,Input_DelayedEvent,145
+Rom,Input_Extractor,142
+Rom,Input_InputKeyedConstArrayMap,217
+Rom,Input_Inverted,112
+Rom,Input_ReadOnly,24
+Rom,Input_True,21
+Rom,OutputGroup_DigitalOutputGroupAdapter,20
+Rom,Output_DataSource,26
+Rom,Output_OutputGroupAdapter,26
+Rom,SimpleStorage,110
+Rom,StaticInputOutputConnector,103
+Rom,DataModelErdPointerAccess,252
+Rom,DataModel_DataSource,919
+Rom,AdcGroupDataSourceConnector,108
+Rom,DataSourceErdPointerAccess,140
+Rom,DataSource_Composite,254
+Rom,DataSource_EndiannessSwapped,423
+Rom,DataSource_Mapped,369
+Rom,DataSource_Ram,502
+Rom,DataSource_RomIndexed,231
+Rom,ErdGea2ReadWriteApiRevision2,1482
+Rom,ErdGea2SubscriptionApiRevision2,1821
+Rom,GpioGroupDataSourceConnector,432
+Rom,DataSourcePacketBuilder,207
+Rom,SimpleDataSourceMessageEndpointConnector,155
+Rom,LinkedList,613
+Rom,RingBuffer,474
+Rom,ActionInvokerOnErdCompareMatch,157
+Rom,CompareMatchCounter,485
+Rom,DataSource_ServiceDiagnosticsRevision3,2786
+Rom,ErdDebounceService,531
+Rom,ErdTransferOnErdCompareMatch,389
+Rom,ErdTransferOnSignal,205
+Rom,InputGroup_ServiceDiagnosticsRevision3FaultTableIterator,131
+Rom,PeriodicErdTransferer,330
+Rom,MessageDisplay_Scrolling,270
+Rom,MessageDisplay_Selectable,121
+Rom,MessageDisplay_SevenSegment,106
+Rom,Output_MessageDisplay,26
+Rom,SevenSegmentCodeMapper_Simple,41
+Rom,SevenSegmentDigit_Simple,101
+Rom,EndiannessSwapper,28
+Rom,ErdStreamReceiver,498
+Rom,EventMergerStatic,97
+Rom,EventSubscription,39
+Rom,Event_BondedPair,102
+Rom,Event_Null,9
+Rom,Event_SafeSynchronous,151
+Rom,Event_SingleSubscriberSynchronous,54
+Rom,Event_Synchronous,84
+Rom,Event_Unsupported,28
+Rom,Filter_WindowAverage,1253
+Rom,Action_Rx2xxSystemReset,36
+Rom,Action_Rx2xxWatchdog,114
+Rom,ContextProtector_Rx2xx,136
+Rom,DigitalOutput_DigitalOutputGroupAdapter,26
+Rom,DigitalOutput_GpioGroupAdapter,26
+Rom,AdcGroup_Mapped,81
+Rom,Adc_DataSource,70
+Rom,Buzzer_Pwm,49
+Rom,DigitalInputGroup_Null,16
+Rom,DigitalOutputGroup_Mapped,84
+Rom,DigitalOutputGroup_Null,14
+Rom,DigitalOutputGroup_Offset,27
+Rom,DigitalOutputGroup_Selectable,212
+Rom,DigitalOutput_Selectable,76
+Rom,DigitalOutput_Toggled,122
+Rom,Eeprom_HardwareEeprom,410
+Rom,Fader_Pwm,247
+Rom,GpioGroup_Debounced,374
+Rom,GpioGroup_Mapped,140
+Rom,HardwareEeprom_I2cMT24XXMMM,2157
+Rom,OrGate,79
+Rom,KeyStatusWordOutputConnector,80
+Rom,KeyStatusWordProvider_Input,95
+Rom,KeyStatusWordProvider_Multiplexed,266
+Rom,KeyStatusWordProvider_Null,22
+Rom,KeyStatusWordProvider_StuckKeyDetector,359
+Rom,SoftKeyEventSource_Filtered,222
+Rom,SoftKeyEventSource_KeyStatusWordProvider,224
+Rom,SoftKeyEventSource_Mapped,195
+Rom,SoftKeyEventSource_Multiplexed,339
+Rom,SoftKeyEventSource_PressAndHold,293
+Rom,SoftKeyEventSource_Slew,413
+Rom,GpioGroupPersonalityDetector,240
+Rom,RecordStorageStackEeprom,313
+Rom,SynchronousRecordStorage_AsynchronousRecordStorageAdapter,729
+Rom,ErdResourceWatchdog,163
+Rom,InputSelectorConnector,89
+Rom,Selector_Simple,185
+Rom,OnErdChangeSignalPublisher,71
+Rom,Signal,98
+Rom,Fsm,89
+Rom,Hsm,602
+Rom,BlockingDelay,55
+Rom,Stopwatch,147
+Rom,SystemRunTimeUpdater,62
+Rom,TimeSource_Interrupt,70
+Rom,Timer,875
+Rom,TimerModuleDiagnostics,283
+Rom,Output_NumericDisplay,179
+Rom,BinarySearch,560
+Rom,Comparator,89
+Rom,Validator_RestrictedRangeErd,441
+Rom,WiFiService,1228
+Rom,AlignmentDetector,3
+Rom,Gea2Message,30
+Rom,Gea2BusNodeBusHasAddressDelegate,23
+Rom,Gea2BusNode_RoutingTable,197
+Rom,CycleStep_AnyParallel,587
+Rom,ErdGea2ApiRevision2PacketVerifier,478
+Rom,DataSourcePacketGea2MessageEndpointConnector,639
+Rom,DataSourcePacketParser,139
+Rom,DataSourcePacketVerifier,234
+Rom,DataSourcePacketReadWriteManager_Simple,243
+Rom,DataSourcePacketSubscriptionFrontEnd_Simple,366
+Rom,DataSourcePacketSubscriptionManager_Simple,773
+Rom,Filter_CumulativeMovingAverage,899
+Rom,AsynchronousRecordStorage_Eeprom,1681
+Rom,DataSource_SynchronousRecordStorage,373
+Rom,lib_a-memcmp,23
+Rom,ClockConfig,435
+Rom,_lshrdi3,44
+Rom,_divdi3,1032
+Rom,_udivdi3,976
+Program Data,ApplianceApiPlugin,76
+Program Data,TunePlayer_HighVolumeTuneChanger,12
+Program Data,TunePlayer_VolumeSourceMappedSequencedTuneWithVolume,12
+Program Data,BoardInfoPlugin,42
+Program Data,CycleEngineManager,47
+Program Data,Padding,281
+Program Data,CycleEngine_CycleSelector,168
+Program Data,CycleStepBuilder_DryerCoolDown,8
+Program Data,CycleStepBuilder_ExtendedTumble,8
+Program Data,CycleStepBuilder_MotorControlReversingDrum,8
+Program Data,CycleStepBuilder_ReduceStatic,8
+Program Data,CycleStepBuilder_SensorDryController,8
+Program Data,CycleStepBuilder_Steam,8
+Program Data,CycleStepBuilder_TimedDryController,8
+Program Data,CycleStepFactory_CycleStepStack,8
+Program Data,CycleStepPreprocessorActions,219
+Program Data,CycleStep_DryerCoolDown,32
+Program Data,CycleStep_ElapsedTime,36
+Program Data,CycleStep_ExtendedTumble,32
+Program Data,CycleStep_MotorControlReversingDrum,32
+Program Data,CycleStep_SensorDryController,32
+Program Data,CycleStep_Steam,76
+Program Data,CycleStep_TimedDryController,32
+Program Data,AverageBaseSensingCycleTimeErdUtils,65
+Program Data,Curvature,39
+Program Data,EndOfCycleReasonProcessor,52
+Program Data,HeatControl,48
+Program Data,HeatControlParametricDataLoader,61
+Program Data,InitialCycleTimeDrynessMultiplicationIndex,72
+Program Data,DryLoadDetection,64
+Program Data,SensorDryDryingParametricDataUtils,12
+Program Data,TemperatureMultiplierIndex,66
+Program Data,TrimmerPlugin,36
+Program Data,DataModel_DataSourceApplication,546
+Program Data,DataSourceRamPlugin,1928
+Program Data,DataSource_Application,17074
+Program Data,ErdOnChangeTranslatorStack,292
+Program Data,InputGroup_NvStorageDefaultData,67
+Program Data,NvStorageStack,2369
+Program Data,OnChangeErdTransfer,47
+Program Data,AdcGroup_Shift,43
+Program Data,CycleHistoryRecordConstructor,24
+Program Data,ServiceDiagnosticsPlugin,241
+Program Data,UsageProfile,185
+Program Data,DoorPlugin,120
+Program Data,Input_GpioPulseQueue60Hz,12
+Program Data,PulseQueueEvaluation,42
+Program Data,FaultPlugin,64
+Program Data,Input_VirtualKnob,12
+Program Data,Selectable_FaultCodeEraser,8
+Program Data,LaundryTuneDefinitions,1572
+Program Data,Action_CycleCountAccumulator,4
+Program Data,Adc_BandLimitCheckWrapper,16
+Program Data,DiagnosticsPlugin,49
+Program Data,DryerTemperatureCollector,3
+Program Data,Filter_ScaledWeightedAverage,120
+Program Data,GpioGroup_OutputManager,12
+Program Data,Input_OkToStartApplication,12
+Program Data,McApplication,28
+Program Data,CycleStep_ReduceStatic,32
+Program Data,Output_FormattedSevenSegmentDisplay,4
+Program Data,Selectable_DoorLatchStatusTest,8
+Program Data,Selectable_DoorSwitchStatusTest,8
+Program Data,Selectable_FaultCodeDisplay,8
+Program Data,Selectable_MoistureSensorTest,8
+Program Data,Selectable_PersonalityDisplay,8
+Program Data,Selectable_PersonalitySelector,8
+Program Data,Selectable_SevenSegmentVersionDisplay,8
+Program Data,Selectable_ThermistorTest,8
+Program Data,Selectable_UiTest,8
+Program Data,Selectable_WaterValveTest,8
+Program Data,SoftKeyEventSource_ServiceModeCheck,8
+Program Data,BlockedVentView_Concrete,61
+Program Data,CleanLintFilterModel_DataModel,8
+Program Data,CleanLintFilterView_Dual,4
+Program Data,ControlLockPresenter,48
+Program Data,ControlLockView_Concrete,68
+Program Data,CriticalFaultView_Ssd,37
+Program Data,CriticalFaultMvp,80
+Program Data,OptionUtils,44
+Program Data,OptionUtilsPlugin,288
+Program Data,CycleSelectorView_Arbitrator,20
+Program Data,Input_CycleSelectorArbitrator,12
+Program Data,DampAlertModel_DataModel,24
+Program Data,DampAlertPresenter,56
+Program Data,DampAlertView_Concrete,58
+Program Data,CycleSupportDataSource,462
+Program Data,ModelSupportDataSource,714
+Program Data,SensorDryDataSource,204
+Program Data,DefaultOptionLoader,63
+Program Data,DelayStartPresenter,120
+Program Data,DelayStartView_Concrete,99
+Program Data,DisplayConfigurator,188
+Program Data,DisplayController_Concrete,85
+Program Data,IntegerDisplay_MessageDisplayVariable,8
+Program Data,Output_DelayTimeIn3Digits,4
+Program Data,Output_Mapped,53
+Program Data,Output_TimeDisplayHourMin,8
+Program Data,Output_TimeDisplayHourMin2Digits,4
+Program Data,Output_TimeDisplayHourMin2Digits0H,4
+Program Data,Output_TimeDisplayHourMin3Digits,4
+Program Data,DrumLightModel_DataModel,12
+Program Data,DrumLightView_Concrete,46
+Program Data,EcoDryModel_DataModel,32
+Program Data,EcoDryView_Concrete,73
+Program Data,EndOfCycleModel_DataModel,12
+Program Data,EndOfCycleView_Concrete,38
+Program Data,ExtendedTumbleModel_DataModel,8
+Program Data,ExtendedTumbleView_Concrete,126
+Program Data,Input_InitialKnobPosition,12
+Program Data,MyCycleModel_Concrete,36
+Program Data,MyCycleSaveClearManager,148
+Program Data,MyCycleView_Concrete,80
+Program Data,OptionBoolAirFluffMvp,1
+Program Data,OptionBoolView_AirFluff,59
+Program Data,OptionBoolView_WarmUp,49
+Program Data,OptionBoolWarmUpMvp,1
+Program Data,OptionLevelModel_DrynessLevel,12
+Program Data,OptionLevelMvp,98
+Program Data,OptionLevelView_Concrete,36
+Program Data,OptionLevelModel_TemperatureSelector,12
+Program Data,Output_DrumLightControl,47
+Program Data,PersonalitySelectionView_Concrete,28
+Program Data,PowerModel_DataModel,12
+Program Data,PowerView_Concrete,38
+Program Data,ReduceStaticView_Concrete,45
+Program Data,RemainingCycleTimeModel_DataModel,16
+Program Data,RemainingCycleTimeView_Concrete,16
+Program Data,SenseModePresenter,8
+Program Data,SenseModeView_Concrete,8
+Program Data,StartPauseModel_Concrete,36
+Program Data,StartPausePresenter,104
+Program Data,StartPauseView_Concrete,65
+Program Data,SteamCycleOptionPresenter,32
+Program Data,SteamCycleOptionView_Concrete,41
+Program Data,SubCycleView_AirFluff,4
+Program Data,SubCycleView_CoolDownConcrete,4
+Program Data,SubCycleView_DryingConcrete,4
+Program Data,SubCycleView_ExtendedTumbleConcrete,4
+Program Data,SubCycleModel_AirFluffDataModel,8
+Program Data,SubCycleModel_CoolDownDataModel,8
+Program Data,SubCycleModel_DryingDataModel,8
+Program Data,SubCycleModel_ExtendedTumbleDataModel,8
+Program Data,TimeAdjustModel_DataModel,52
+Program Data,TimeAdjustPresenter,6
+Program Data,TimeAdjustView_TimedDry,120
+Program Data,UiApplication,35
+Program Data,UiStateMachineConfig_Concrete,100
+Program Data,UnpopulatedCycleView_Concrete,12
+Program Data,UserActivityDetectionPlugin,46
+Program Data,VolumeView_AlertVolume,42
+Program Data,VolumeView_KeyVolume,50
+Program Data,VolumeModel_DataModel,4
+Program Data,VolumeMvp,52
+Program Data,WiFiCommissioningView_Concrete,58
+Program Data,WasherLinkPresenter,56
+Program Data,WasherLinkView_NullScene,82
+Program Data,CycleRunWatchdog,8
+Program Data,SoftKeyEventSource_WifiKeyBoard,8
+Program Data,TlMbConsumerErrorModeApplication,9
+Program Data,GeaStack,174
+Program Data,Application,8
+Program Data,CycleSupportApplication,454
+Program Data,DryerHardwareTl27Mb,8
+Program Data,DryerTl27MbDevicesStack,266
+Program Data,ErdMultiplexerStack,30
+Program Data,HeartbeatSimulator,60
+Program Data,KeyStack,241
+Program Data,LedStack,12
+Program Data,MessageDisplayStack,34
+Program Data,PowerModeManagerPlugin,24
+Program Data,TunePlayerStack,126
+Program Data,HeartbeatPlugin,64
+Program Data,TlMbPersonalityDetectorStack,56
+Program Data,Action_LowPower,4
+Program Data,Action_NormalPower,4
+Program Data,TlMbServiceModeApplication,18
+Program Data,TlMbServiceModeTestPlugin,90
+Program Data,LocalStackConfiguration,20
+Program Data,main,40
+Program Data,Input_AdcTemperatureConverterInlet,116
+Program Data,Input_AdcTemperatureConverterOutlet,12
+Program Data,AdcGroup_Rx231,50
+Program Data,BufferedUart_Channel1Dtc,72
+Program Data,BufferedUart_Channel5Dtc,72
+Program Data,BufferedUart_Channel8Dtc,72
+Program Data,GpioGroup_Rx231,2109
+Program Data,Header,12
+Program Data,I2c_Rx231SerialChannel12,88
+Program Data,Pwm_BuzzerFrequencyRx231,64
+Program Data,Pwm_BuzzerVolumeRx231,61
+Program Data,Pwm_DrumLightRx231,58
+Program Data,BootLoaderConfiguration,108
+Program Data,Action_Context,53
+Program Data,Action_Delayed,4
+Program Data,Action_DelayedUntilBool,4
+Program Data,Action_ErdSignalPublisher,64
+Program Data,Action_ErdTransfer,4
+Program Data,Action_ErdWriter,4
+Program Data,Action_Null,4
+Program Data,Allocator_Resettable_Block,76
+Program Data,Allocator_Resettable_UsageMonitor,12
+Program Data,Input_StackUsageCalculator,76
+Program Data,StackAllocator,212
+Program Data,DataSource_ApplianceApiRevision1,89
+Program Data,Adsr_Isr,54
+Program Data,RepeatingTunePlayer,53
+Program Data,TunePlayer_Adsr,12
+Program Data,TunePlayer_DataSource,67
+Program Data,TunePlayer_Mapped,12
+Program Data,ImageInfo_Concrete,69
+Program Data,BootLoaderParametric,77
+Program Data,Gea2CommonCommands,75
+Program Data,Input_ErdGea2UnlockState,14
+Program Data,Gea2MessageEndpoint_Gea2PacketEndpointAdapter,8
+Program Data,Gea2BusNode_Gea2InterfaceAdapter,20
+Program Data,Gea2BusNode_Gea2PacketEndpoint,36
+Program Data,Gea2Bus_Simple,8
+Program Data,Gea2Interface_BufferedFullDuplex,124
+Program Data,Gea2PacketEndpoint_PacketRestrictor,16
+Program Data,Gea2PacketQueue_EfficientStorage,112
+Program Data,Constants_Binary,22
+Program Data,Crc16Calculator_Table,520
+Program Data,CycleSelector_Protected,67
+Program Data,CycleStepBuilder_DependentParallelWithRemainingTimeExtension,8
+Program Data,CycleStepBuilder_JoinedParallelWithRemainingTimeExtension,8
+Program Data,CycleStepBuilder_Null,8
+Program Data,CycleStepBuilder_RoutingSwitch,78
+Program Data,CycleStepBuilder_SelectDeselectErdWriter,8
+Program Data,CycleStepBuilder_SequenceWithRemainingTimeExtension,8
+Program Data,CycleStepBuilder_StartErdWriter,8
+Program Data,CycleStepBuilder_StartStopErdWriter,8
+Program Data,CycleStepBuilder_StartStopPauseResumeErdWriter,8
+Program Data,CycleStepBuilder_StepStatus,8
+Program Data,CycleStepFactory_OptimizedCycleStepBuilderCollection,100
+Program Data,CycleStepFactory_StateMachineWrapper,8
+Program Data,CycleStep_DelayChildUntil,36
+Program Data,CycleStep_DependentParallel,40
+Program Data,CycleStep_JoinedParallel,36
+Program Data,CycleStep_Null,32
+Program Data,CycleStep_PreProcessor,36
+Program Data,CycleStep_RoutingSwitch,36
+Program Data,CycleStep_SelectDeselectErdWriter,32
+Program Data,CycleStep_Sequence,36
+Program Data,CycleStep_StartErdWriter,32
+Program Data,CycleStep_StartStopErdWriter,32
+Program Data,CycleStep_StartStopPauseResumeErdWriter,32
+Program Data,CycleStep_StateMachine,36
+Program Data,CycleStep_StepStatus,32
+Program Data,CycleStepExtension_JoinedParallelRemainingTime,40
+Program Data,CycleStepExtension_SequenceRemainingTime,40
+Program Data,CycleStepBuilder_AnyParallelWithRemainingTimeExtension,8
+Program Data,CycleStepBuilder_TimedWithRemainingTimeExtension,8
+Program Data,CycleStepExtension_AnyParallelRemainingTime,40
+Program Data,CycleStepExtension_DependentParallelRemainingTime,40
+Program Data,CycleStep_TimedWithRemainingTimeExtension,36
+Program Data,ConstArrayMap_BinarySearch,77
+Program Data,ConstArrayMap_BinarySearchWithComparator,91
+Program Data,ConstArrayMap_Composite,12
+Program Data,ConstArrayMap_DirectIndex,76
+Program Data,ConstArrayMap_LinearSearch,12
+Program Data,ConstBidirectionalMap_ConstArrayMap,82
+Program Data,ConstMultiMap_BinarySearch,73
+Program Data,DigitalOutputGroup_BitmappedOutputAdapter,84
+Program Data,ErdConcatenatorService,61
+Program Data,ErdDataExtractor,55
+Program Data,ErdHeartbeat,53
+Program Data,ErdLogicService,54
+Program Data,ErdMultiplexerService,60
+Program Data,ErdOnChangeTranslatorService,67
+Program Data,InputOutput_DataSource,12
+Program Data,Input_DataSource,12
+Program Data,Input_DelayedEvent,12
+Program Data,Input_Extractor,12
+Program Data,Input_InputKeyedConstArrayMap,80
+Program Data,Input_Inverted,12
+Program Data,Input_ReadOnly,12
+Program Data,Input_True,12
+Program Data,OutputGroup_DigitalOutputGroupAdapter,4
+Program Data,Output_DataSource,4
+Program Data,Output_OutputGroupAdapter,4
+Program Data,SimpleStorage,16
+Program Data,DataModel_DataSource,118
+Program Data,DataSource_Composite,75
+Program Data,DataSource_EndiannessSwapped,16
+Program Data,DataSource_Mapped,72
+Program Data,DataSource_Ram,69
+Program Data,DataSource_RomIndexed,76
+Program Data,ErdGea2SubscriptionApiRevision2,102
+Program Data,GpioGroupDataSourceConnector,67
+Program Data,SimpleDataSourceMessageEndpointConnector,79
+Program Data,LinkedList,64
+Program Data,RingBuffer,64
+Program Data,CompareMatchCounter,59
+Program Data,DataSource_ServiceDiagnosticsRevision3,94
+Program Data,ErdDebounceService,58
+Program Data,InputGroup_ServiceDiagnosticsRevision3FaultTableIterator,8
+Program Data,PeriodicErdTransferer,61
+Program Data,MessageDisplay_Scrolling,68
+Program Data,MessageDisplay_Selectable,16
+Program Data,MessageDisplay_SevenSegment,8
+Program Data,Output_MessageDisplay,4
+Program Data,SevenSegmentCodeMapper_Simple,100
+Program Data,SevenSegmentDigit_Simple,15
+Program Data,ErdStreamReceiver,55
+Program Data,EventSubscription,51
+Program Data,Event_BondedPair,8
+Program Data,Event_Null,8
+Program Data,Event_SafeSynchronous,8
+Program Data,Event_SingleSubscriberSynchronous,75
+Program Data,Event_Synchronous,8
+Program Data,Event_Unsupported,59
+Program Data,Filter_WindowAverage,187
+Program Data,Action_Rx2xxSystemReset,4
+Program Data,Action_Rx2xxWatchdog,72
+Program Data,ContextProtector_Rx2xx,78
+Program Data,DigitalOutput_DigitalOutputGroupAdapter,4
+Program Data,DigitalOutput_GpioGroupAdapter,4
+Program Data,AdcGroup_Mapped,66
+Program Data,Adc_DataSource,65
+Program Data,Buzzer_Pwm,4
+Program Data,DigitalInputGroup_Null,4
+Program Data,DigitalOutputGroup_Mapped,76
+Program Data,DigitalOutputGroup_Null,4
+Program Data,DigitalOutputGroup_Offset,4
+Program Data,DigitalOutputGroup_Selectable,88
+Program Data,DigitalOutput_Selectable,12
+Program Data,DigitalOutput_Toggled,4
+Program Data,Eeprom_HardwareEeprom,32
+Program Data,Fader_Pwm,4
+Program Data,GpioGroup_Debounced,78
+Program Data,GpioGroup_Mapped,75
+Program Data,HardwareEeprom_I2cMT24XXMMM,106
+Program Data,OrGate,8
+Program Data,KeyStatusWordProvider_Input,8
+Program Data,KeyStatusWordProvider_Multiplexed,80
+Program Data,KeyStatusWordProvider_Null,8
+Program Data,KeyStatusWordProvider_StuckKeyDetector,8
+Program Data,SoftKeyEventSource_Filtered,8
+Program Data,SoftKeyEventSource_KeyStatusWordProvider,8
+Program Data,SoftKeyEventSource_Mapped,8
+Program Data,SoftKeyEventSource_Multiplexed,77
+Program Data,SoftKeyEventSource_PressAndHold,8
+Program Data,SoftKeyEventSource_Slew,8
+Program Data,GpioGroupPersonalityDetector,68
+Program Data,SynchronousRecordStorage_AsynchronousRecordStorageAdapter,111
+Program Data,Selector_Simple,56
+Program Data,Signal,41
+Program Data,Fsm,45
+Program Data,Hsm,45
+Program Data,TimeSource_Interrupt,4
+Program Data,Timer,38
+Program Data,Output_NumericDisplay,84
+Program Data,Validator_RestrictedRangeErd,70
+Program Data,Gea2BusNode_RoutingTable,20
+Program Data,CycleStep_AnyParallel,97
+Program Data,ErdGea2ApiRevision2PacketVerifier,100
+Program Data,DataSourcePacketReadWriteManager_Simple,8
+Program Data,DataSourcePacketSubscriptionFrontEnd_Simple,123
+Program Data,DataSourcePacketSubscriptionManager_Simple,122
+Program Data,Filter_CumulativeMovingAverage,197
+Program Data,AsynchronousRecordStorage_Eeprom,90
+Program Data,DataSource_SynchronousRecordStorage,93
+Program Data,_clz,256
+Parametric Data,DryerTl27MbMc.parametric,131072
+Fixed Vector,VectorTable,128
+Dtc Vector Table,DTC_VectorTable,1024
+Ram,ServiceDiagnosticsPlugin,4
+Ram,Output_FormattedSevenSegmentDisplay,34
+Ram,CriticalFaultView_Ssd,23
+Ram,StartPausePresenter,15
+Ram,UnpopulatedCyclePresenter,3
+Ram,Padding,1
+Ram,DryerTl27MbDevicesStack,8
+Ram,Crc16Calculator_Table,4
+Ram,CycleStep_Null,4
+Ram,Event_Null,4
+Dtc Table,BufferedUart_Channel1Dtc,104
+Dtc Table,BufferedUart_Channel5Dtc,104
+Dtc Table,BufferedUart_Channel8Dtc,104
+bss,LaundryUassert,74
+bss,Padding,13
+bss,AverageBaseSensingCycleTimeErdUtils,8
+bss,AlgorithmUtils,4
+bss,SensorDryDryingParametricDataUtils,12
+bss,CycleHistoryRecordConstructor,16
+bss,OptionUtils,36
+bss,DryerTl27MbDevicesStack,15
+bss,main,29524
+bss,AdcGroup_Rx231,164
+bss,CMT0,12
+bss,GpioGroup_Rx231,4
+bss,I2c_Rx231SerialChannel1,32
+bss,I2c_Rx231SerialChannel12,32
+bss,Pwm_BuzzerFrequencyRx231,8
+bss,Pwm_BuzzerVolumeRx231,4
+bss,Pwm_DrumLightRx231,5
+bss,Action_Null,4
+bss,BootLoaderParametric,2
+bss,Input_True,4
+bss,DataModel_DataSource,4
+bss,SevenSegmentCodeMapper_Simple,4
+bss,Event_Unsupported,4
+bss,Action_Rx2xxSystemReset,4
+bss,Action_Rx2xxWatchdog,5
+bss,ContextProtector_Rx2xx,6
+bss,DigitalInputGroup_Null,4
+bss,DigitalOutputGroup_Null,4
+bss,KeyStatusWordProvider_Null,4
