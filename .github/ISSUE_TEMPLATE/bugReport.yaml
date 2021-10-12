@@ -5,32 +5,32 @@ labels: ["bug", "critical"]
 assignees:
   - EfrenRodriguez
 body:
-  - type: textarea
-    id: overview
-    attributes:
-      label: Overview
-      description: Provide high level overview of the problem
-      placeholder: Provide a 3 lines overview
-      value: " "
-    validations:
-      required: true
-  - type: textarea
-    id: expected_behavior
-    attributes:
-      label: Expected Behavior
-      description: Describe expected behavior, include requirements link and what specific requirement is being affected if applies.
-      placeholder: " "
-      value: " "
-    validations:
-      required: true
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+  # - type: textarea
+  #   id: overview
+  #   attributes:
+  #     label: Overview
+  #     description: Provide high level overview of the problem
+  #     placeholder: Provide a 3 lines overview
+  #     value: " "
+  #   validations:
+  #     required: true
+  # - type: textarea
+  #   id: expected_behavior
+  #   attributes:
+  #     label: Expected Behavior
+  #     description: Describe expected behavior, include requirements link and what specific requirement is being affected if applies.
+  #     placeholder: " "
+  #     value: " "
+  #   validations:
+  #     required: true
+  # - type: input
+  #   id: contact
+  #   attributes:
+  #     label: Contact Details
+  #     description: How can we get in touch with you if we need more info?
+  #     placeholder: ex. email@example.com
+  #   validations:
+  #     required: false
   - type: textarea
     id: what-happened
     attributes:
