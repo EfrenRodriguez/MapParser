@@ -9,9 +9,7 @@ body:
     id: overview
     attributes:
       label: Overview
-      description: Provide high level overview of the problem
-      placeholder: Provide a 3 lines overview
-      value: "Bug overview "
+      description: Provide description of the problem including actual behavior
       render: markdown
     validations:
       required: true
@@ -25,10 +23,23 @@ body:
       render: markdown
     validations:
       required: true
+  - type: dropdown
+    id: software_image
+    attributes:
+      label: Software image
+      description: In what software image you found the issue?
+      options:
+        - Consumer
+        - Default
+        - Reliability
+        - Electronics
+        - Custom (Add details in Software Version text box)
+    validations:
+      required: true
   - type: textarea
     id: software_details
     attributes:
-      label: Software version where issue was found
+      label: Software version
       description: Add specific details where the issue was found.
       render: markdown
       value: |
@@ -38,19 +49,6 @@ body:
             - Personality
             - Cycle running
             - Options: `Add options selected such as spin, soil level, or any other relevant if it applies`
-    validations:
-      required: true
-  - type: dropdown
-    id: software_image
-    attributes:
-      label: Software image where it was found
-      description: In what software image you found the issue?
-      options:
-        - Consumer
-        - Default
-        - Reliability
-        - Electronics
-        - Custom
     validations:
       required: true
   - type: textarea
@@ -75,7 +73,7 @@ body:
   - type: textarea
     id: root-cause
     attributes:
-      label: Root cause for the issue
+      label: Root cause
       description: Once solved, add the a brief root cause explanation for future reference on how this bug was closed
       render: markdown
     validations:
