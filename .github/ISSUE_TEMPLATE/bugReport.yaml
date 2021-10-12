@@ -68,7 +68,6 @@ body:
       label: Additional information.
       description: |
          Please add any additional information, include logs, images, etc.
-      render: markdown
     validations:
       required: false
   - type: textarea
