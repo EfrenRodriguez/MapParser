@@ -1,14 +1,28 @@
 name: Bug Report
 description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+title: " "
+labels: ["bug", "critical"]
 assignees:
-  - octocat
+  - EfrenRodriguez
 body:
-  - type: markdown
+  - type: textarea
+    id: overview
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
+      label: Overview
+      description: Provide high level overview of the problem
+      placeholder: Provide a 3 lines overview
+      value: " "
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe expected behavior, include requirements link and what specific requirement is being affected if applies.
+      placeholder: " "
+      value: " "
+    validations:
+      required: true
   - type: input
     id: contact
     attributes:
