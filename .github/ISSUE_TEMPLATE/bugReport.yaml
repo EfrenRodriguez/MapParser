@@ -11,7 +11,7 @@ body:
       label: Overview
       description: Provide high level overview of the problem
       placeholder: Provide a 3 lines overview
-      value: " "
+      value: "Bug overview "
     validations:
       required: true
   - type: textarea
@@ -20,7 +20,7 @@ body:
       label: Expected Behavior
       description: Describe expected behavior, include requirements link and what specific requirement is being affected if applies.
       placeholder: " "
-      value: " "
+      value: "Expected behavior "
     validations:
       required: true
   - type: input
