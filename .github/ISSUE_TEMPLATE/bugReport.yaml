@@ -12,6 +12,7 @@ body:
       description: Provide high level overview of the problem
       placeholder: Provide a 3 lines overview
       value: "Bug overview "
+      render: markdown
     validations:
       required: true
   - type: textarea
@@ -19,58 +20,75 @@ body:
     attributes:
       label: Expected Behavior
       description: Describe expected behavior, include requirements link and what specific requirement is being affected if applies.
-      placeholder: "Expeced behavior "
-      value: "Expected behavior "
+      placeholder: "Expected behavior "
+      value: "Expected behavior is: "
+      render: markdown
     validations:
       required: true
-  - type: input
-    id: contact
+  - type: textarea
+    id: software_details
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Software version where issue was found
+      description: Add specific details where the issue was found.
+      render: markdown
+      value: |
+         - Application version / build where observed
+         - Parametric version / build where observed
+         - Configuration setup:
+            - Personality
+            - Cycle running
+            - Options: `Add options selected such as spin, soil level, or any other relevant if it applies`
+    validations:
+      required: true
+  - type: dropdown
+    id: software_image
+    attributes:
+      label: Software image where it was found
+      description: In what software image you found the issue?
+      options:
+        - Consumer
+        - Default
+        - Reliability
+        - Electronics
+        - Custom
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: Steps to reproduce the behavior.
+      render: markdown
+      placeholder: |
+        1. First step
+        2. Second step
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: additional_information
+    attributes:
+      label: Additional information.
+      description: Please add any additional information, include logs, images, etc.
+      render: markdown
     validations:
       required: false
   - type: textarea
-    id: what-happened
+    id: root-cause
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Root cause for the issue
+      description: Once solved, add the a brief root cause explanation for future reference on how this bug was closed
+      render: markdown
     validations:
-      required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
+      required: false
   - type: textarea
-    id: logs
+    id: qa_section
     attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: QA Section
+      description: Details to test for QA
+      render: markdown
+      value: |
+         - Build / hash to test:
+         - Personality to test / hardware to test:
+         - Parametric version and link:
+    validations:
+      required: false
