@@ -19,7 +19,7 @@ body:
     attributes:
       label: Expected Behavior
       description: Describe expected behavior, include requirements link and what specific requirement is being affected if applies.
-      placeholder: " "
+      placeholder: "Expeced behavior "
       value: "Expected behavior "
     validations:
       required: true
