@@ -38,5 +38,4 @@ jobs:
       run: |
         pytest
     - name: Run map parser
-       run: |
-        python3 Source/mapParser.py
+       run: python3 Source/mapParser.py
