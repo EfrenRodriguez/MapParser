@@ -22,7 +22,7 @@ def GetAddressAndLength(myLine):
       length = myLine[myLine.rfind("0x") :myLine.find(" ", myLine.rfind("0x"))]
 
   return address , length
-    
+
 
 def IsSectionBreaker(myLine):
   if(myLine[0] == "."):
@@ -64,7 +64,7 @@ def GetMemoryType(myLine, myJsonConfigurationData):
 def GetFolderName(myLine):
   levels = myLine.count('/')
   folderName = " "
-  array = [ ] 
+  array = [ ]
   if (levels >= 2):
     lastDivider = myLine.rfind("/")
     initialDivider = myLine.find("/")
@@ -107,7 +107,7 @@ def IsValidObjectName(myObjectName):
 def ExportSummaryToCsv(myDictionary):
   topLevelKeys = list(myDictionary.keys())
   lowLevelKeys = list(myDictionary[topLevelKeys[0]].keys())
-  
+
   if os.path.exists("Outputs/summary.csv"):
     os.remove("Outputs/summary.csv")
 
@@ -128,19 +128,22 @@ def ExportSummaryToJson(myDictionary):
 
 
 def main():
-  
+
   initialTime = datetime.now()
 
   with open('Configuration/configuration.json') as json_file:
     theJsonConfigurationData = json.load(json_file)
 
   inputFile = theJsonConfigurationData["inputFile"]
-  
+
   mapFileToParse = open(inputFile, "r")
   count = len(open(inputFile).readlines(  ))
 
   if os.path.exists("Outputs/output.csv"):
     os.remove("Outputs/output.csv")
+
+  if not os.path.exists("Outputs"):
+    os.makedirs("Outputs")
 
 
   rowContent = ["Line", "Memory Type", "Address", "Size" , "Name", "Folder Name", "Path1", "Path 2", "Path 3"]
@@ -164,7 +167,7 @@ def main():
           if (IsValidObjectName(objectName) and WantToDisplayMemoryTypeName(memoryType, theJsonConfigurationData)):
             rowContent = [x, memoryType, address, size , objectName, folderName]
             pathLen = len(path)
-            for x in range(0, pathLen): 
+            for x in range(0, pathLen):
               rowContent.append(path[pathLen -1 - x])
             append_list_as_row('Outputs/output.csv', rowContent)
             directory[str(memoryType)][str(objectName)] += size
@@ -172,8 +175,8 @@ def main():
   ExportSummaryToCsv(directory)
   ExportSummaryToJson(directory)
 
-  print ("Total Processing time is : " + str(datetime.now() - initialTime)) 
-  print ("Total analized lines are  : " + str(count)) 
+  print ("Total Processing time is : " + str(datetime.now() - initialTime))
+  print ("Total analized lines are  : " + str(count))
 
 
 if __name__ == "__main__":

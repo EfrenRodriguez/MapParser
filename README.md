@@ -1,7 +1,13 @@
 # MapParser
 Learning Project To Parse a Map File into a Json
 
-Build in Pyton 3 
+Build in Pyton 3
+
+## Use
+Run
+```
+sh analyze.sh
+```
 
 ## Inputs
 You need to provide the following inputs
@@ -26,4 +32,4 @@ The scrip will provide you with 3 output files
       - Total object size in bytes
    - summary.json. Similar information than summary.csv but in json format.
 
-Created By Efren Rodriguez. 
+Created By Efren Rodriguez.

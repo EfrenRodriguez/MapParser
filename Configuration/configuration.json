@@ -1,5 +1,5 @@
 {
-  "inputFile":"MapFiles/sampleFile.map",
+  "inputFile":"MapFiles/sample.map",
   "ignoreConfiguration": [
     {
       "ignore": "debug_abbrev"
